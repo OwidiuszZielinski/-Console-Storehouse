@@ -24,9 +24,9 @@ public class ProductPC {
     void setVat(Integer[] vat){
         this.vat = vat;
     }
-    ProductPC(String itemname, String nettoprice){
+    ProductPC(String itemname){
+
         this.itemname = itemname;
-        this.nettoprice = nettoprice;
 
 
     }
