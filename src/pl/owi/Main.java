@@ -21,7 +21,7 @@ public class Main {
 
         while (true) {
 
-
+            //Zmiana
             //System.out.println("Co dalej?");
 
             System.out.println("1.Utwórz listę przedmiotów w magazynie");
