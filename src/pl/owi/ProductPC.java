@@ -4,6 +4,10 @@ import java.util.ArrayList;
 public class ProductPC {
 
     private String nettoprice;
+
+    public ProductPC(String groupname) {
+    }
+
     String getNettoprice() {
         return this.nettoprice;
     }

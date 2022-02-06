@@ -7,17 +7,19 @@ public class Storehouse {
 
 
     ArrayList<ProductPC> itemlist;
-    String storename;
-    int storagesize = 100;
+    public String storename;
+    int storagesize;
     int storagecapacity;
     int itemnumber;
+    public String groupname;
 
+    Storehouse(int st0oragesize){
 
-    Storehouse(int storagesize){
-        this.storagesize = storagesize;
         this.itemlist = new ArrayList<ProductPC>();
-
+        this.storagesize = storagesize;
     }
+
+
 
     public void additem(String nettoprice,String itemname,String group,int vat){
         this.itemlist.add(new ProductPC(nettoprice,itemname,group,vat));
