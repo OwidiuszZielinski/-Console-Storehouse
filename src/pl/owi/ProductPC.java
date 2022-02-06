@@ -3,74 +3,47 @@ import java.util.ArrayList;
 
 public class ProductPC {
 
+    private String nazwa;
 
-    private String nameofadditem;
-    String getNameofadditem(){
-        return this.nameofadditem;
-    }
-    void setNameofadditem(String nameofadditem){
-        this.nameofadditem = nameofadditem;
+    public ProductPC() {
     }
 
-
-
-    private String itemquantity;
-    String getItemquantity(){
-        return this.itemquantity;
-    }
-    void setItemquantity(String itemquantity){
-        this.itemquantity = itemquantity;
+    public ProductPC(String nazwa, String grupa, Integer cenanetto, Integer vat, Integer ilosc) {
+        this.nazwa = nazwa;
+        this.grupa = grupa;
+        this.cenanetto = cenanetto;
+        this.vat = vat;
+        this.ilosc = Integer.valueOf(ilosc);
     }
 
-
-
-    private int storagespace = 10000;
-    int getStoragespace(){
-        return this.storagespace;
-    }
-    void setStoragespace(int storagespace){
-        this.storagespace = storagespace;
+    String getNazwa() {
+        return this.nazwa;
     }
 
+    private String grupa;
 
-
-    private String itemsgroup;
-    String getItemsgroup(){
-        return this.itemsgroup;
-    }
-    void setItemsgroup(String itemsgroup){
-        this.itemsgroup = itemsgroup;
+    String getGrupa() {
+        return this.grupa;
     }
 
+    private Integer cenanetto;
 
+    Integer getCenanetto() {
+        return this.cenanetto;
+    }
 
-    private int[] vat =  {23,15,8,5,0};
+    private Integer vat;
 
-    public int[] getVat() {
+    Integer getVat() {
         return this.vat;
     }
-    void setVat(int vat){
 
+    private Integer ilosc;
+
+    Integer getIlosc() {
+        return this.ilosc;
     }
 
 
-    private String nettoprice;
-    String getNettoprice(){
-        return this.nettoprice;
-    }
-    void setNettoprice(String nettoprice){
-        this.nettoprice = nettoprice;
-    }
-
-    //konstruktor
-    public ProductPC(String nameofadditem,String itemquantity,Integer nettoprice,Integer[] vat) {
-        this.nameofadditem = getNameofadditem();
-        this.itemquantity = getItemquantity();
-        this.nettoprice = getNettoprice();
-        this.vat = getVat();
-
 
     }
-}
-
-
