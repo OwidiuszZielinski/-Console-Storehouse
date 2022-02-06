@@ -14,13 +14,13 @@ public class Storehouse {
 
 
     Storehouse(int storagesize){
-        this.itemnumber = 0;
+        this.storagesize = storagesize;
         this.itemlist = new ArrayList<ProductPC>();
-        this.storagecapacity = storagesize;
+
     }
 
-    public void additem(String itemname){
-        this.itemlist.add(new ProductPC(itemname));
+    public void additem(String itemname,String group){
+        this.itemlist.add(new ProductPC(itemname,group));
 
     }
 

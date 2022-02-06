@@ -6,14 +6,9 @@ public class ProductPC {
     public String nettoprice;
 
     public String itemname;
+    public String group;
 
-    private String[] group = {"food","electronics","toys"};
-    String[] getGroup(){
-        return this.group;
-    }
-    void setGroup(String[] group){
-        this.group = group;
-    }
+
 
     //jesli nie zadziała sprobuje group i vat zrobic na Arrayliscie
 
@@ -23,8 +18,9 @@ public class ProductPC {
     }
     void setVat(Integer[] vat){
         this.vat = vat;
+        
     }
-    ProductPC(String itemname){
+    ProductPC(String itemname,String group){
 
         this.itemname = itemname;
 
