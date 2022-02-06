@@ -19,8 +19,8 @@ public class Storehouse {
 
     }
 
-    public void additem(String itemname,String group){
-        this.itemlist.add(new ProductPC(itemname,group));
+    public void additem(String nettoprice,String itemname,String group,int vat){
+        this.itemlist.add(new ProductPC(nettoprice,itemname,group,vat));
 
     }
 

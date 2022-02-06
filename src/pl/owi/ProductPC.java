@@ -3,32 +3,35 @@ import java.util.ArrayList;
 
 public class ProductPC {
 
-    public String nettoprice;
-
+    private String nettoprice;
+    String getNettoprice() {
+        return this.nettoprice;
+    }
+    void setNettoprice(String nettoprice){
+        this.nettoprice = nettoprice;
+    }
     public String itemname;
+
     public String group;
-
-
-
-    //jesli nie zadziała sprobuje group i vat zrobic na Arrayliscie
-
-    private Integer[] vat = {23,8,5,0};
-    Integer[] getVat(){
-        return this.vat;
+    String getGroupe() {
+        return this.group;
     }
-    void setVat(Integer[] vat){
-        this.vat = vat;
-        
+    void setGroup(String group){
+        this.group = group;
     }
-    ProductPC(String itemname,String group){
+    public  int vat;
 
+
+    ProductPC(String nettoprice,String itemname,String group,int vat){
+
+        this.nettoprice = nettoprice;
         this.itemname = itemname;
+        this.group = group;
+        this.vat = vat;
+
 
 
     }
-
-
-
 
 
 }
