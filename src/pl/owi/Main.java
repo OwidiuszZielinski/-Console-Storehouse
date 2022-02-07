@@ -53,32 +53,29 @@ public class Main {
                     ProductPC temp = new ProductPC();
                     temp.setNazwa(scanner.next());
 
-
-
                     System.out.print("Grupa towaru : ");
-                    String grupa = scanner.next();
-                    temp.set
+                    temp.setGrupa(scanner.next());
 
                     System.out.print("Cena netto towaru : ");
-                    Integer netto = scanner.nextInt();
+                    temp.setCenanetto(scanner.nextInt());
 
                     System.out.print("Wysokość stawki vat : ");
-                    Integer vat = scanner.nextInt();
+                    temp.setVat(scanner.nextInt());
 
                     System.out.print("Ilość : ");
-                    Integer ilosc = scanner.nextInt();
+                    temp.setIlosc(scanner.nextInt());
+                    storehouse.dodajelement();
 
 
-                    storehouse.dodajelement(nazwa,grupa,netto,vat,ilosc);
 
                     break;
 
 
                 case 3:
 
-                    storehouse.pokazliste();
+                    //storehouse.pokazliste();
 
-                    storehouse.pokazdlugosclisty();
+                    //storehouse.pokazdlugosclisty();
 
 
 

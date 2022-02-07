@@ -32,25 +32,35 @@ public class ProductPC {
     String getGrupa() {
         return this.grupa;
     }
+    public void setGrupa(String grupa){
+        this.grupa = grupa;
+    }
 
     private Integer cenanetto;
 
     Integer getCenanetto() {
         return this.cenanetto;
     }
+    public void setCenanetto(Integer cenanetto){
+        this.cenanetto = cenanetto;
 
+    }
     private Integer vat;
 
     Integer getVat() {
         return this.vat;
     }
-
+    public void setVat(Integer vat){
+        this.vat = vat;
+    }
     private Integer ilosc;
 
     Integer getIlosc() {
         return this.ilosc;
     }
-
+    public void setIlosc(Integer ilosc){
+        this.ilosc = ilosc;
+    }
 
 
     }
