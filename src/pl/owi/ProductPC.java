@@ -5,9 +5,12 @@ public class ProductPC {
 
     private String nazwa;
 
+    private static ArrayList<ProductPC> listatowarow = null;// po co ten null?tworzymy singleton czyli zamykamy liste w private
+
     public ProductPC() {
+
     }
-//wywolam w main pusty konstruktor i stworze settery dla wszystkich pól nastepnie wywolam je uzywajac wartosci ze skanera
+    //wywolam w main pusty konstruktor i stworze settery dla wszystkich pól nastepnie wywolam je uzywajac wartosci ze skanera
     //
     public ProductPC(String nazwa, String grupa, Integer cenanetto, Integer vat, Integer ilosc) {
         this.nazwa = nazwa;
@@ -17,6 +20,19 @@ public class ProductPC {
         this.ilosc = Integer.valueOf(ilosc);
     }
 
+    // tworze singleton
+
+    public static ArrayList<ProductPC> getInstance(){
+        if (listatowarow == null);
+        listatowarow = new ArrayList<ProductPC>();
+
+        return listatowarow;
+    }
+    //Wyjmuje pojedyncza instancje , jesli jej nie ma to utworzy nowy obiekt Arraylist.
+    //Opisz co tutaj stworzyles masz zapisane na DC z pobytu u Mateusza
+
+
+    //tworze gettery i settery
 
     String getNazwa() {
         return this.nazwa;

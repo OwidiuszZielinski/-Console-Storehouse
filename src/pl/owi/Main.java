@@ -11,7 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         Storehouse storehouse = new Storehouse();
 
         Scanner scanner = new Scanner(System.in);
@@ -43,7 +42,10 @@ public class Main {
 
                     System.out.println("Nazwij listę towarów - ");
                     String nazwalisty = scanner.next();
+                    storehouse.nowalista();//czy konieczna jest ta metoda?
                     System.out.println("Utworzono listę o nazwie : " + nazwalisty);
+                    //nie rozumiem dlaczego utworzylo listę i czy ją dobrze utworzylo bo nie zrobilem metody tworzenia list,
+                    //chyba ze konstruktor robi listy
                     break;
 
                 case 2:
@@ -73,9 +75,9 @@ public class Main {
 
                 case 3:
 
-                    //storehouse.pokazliste();
+                    storehouse.pokazliste();
 
-                    //storehouse.pokazdlugosclisty();
+                    storehouse.pokazdlugosclisty();
 
 
 
