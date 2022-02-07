@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.List;
 import pl.owi.Storehouse;
+//ignore dodaj
 
 public class Main {
 
@@ -20,7 +21,7 @@ public class Main {
         System.out.println("Wybierz działanie");
 
         while (true) {
-
+            //
             //Zmiana
             //System.out.println("Co dalej?");
 
@@ -49,10 +50,14 @@ public class Main {
                     System.out.println("Wprowadź  :");
 
                     System.out.print("Nazwa towaru : ");
-                    String nazwa = scanner.next();
+                    ProductPC temp = new ProductPC();
+                    temp.setNazwa(scanner.next());
+
+
 
                     System.out.print("Grupa towaru : ");
                     String grupa = scanner.next();
+                    temp.set
 
                     System.out.print("Cena netto towaru : ");
                     Integer netto = scanner.nextInt();

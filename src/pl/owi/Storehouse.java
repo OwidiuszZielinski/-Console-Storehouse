@@ -22,7 +22,9 @@ public class Storehouse {
         }
         else{
             System.out.println("Magazyn przepelniony");
-
+        //Stworz produktpc w main uzywajac setterow i przeciaz metode dodajelement by przyjmowala obiekt klasy produktpc
+            //jako paramter i dodawala go do listy
+            //
 
         }
 

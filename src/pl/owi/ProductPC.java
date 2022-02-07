@@ -7,7 +7,8 @@ public class ProductPC {
 
     public ProductPC() {
     }
-
+//wywolam w main pusty konstruktor i stworze settery dla wszystkich pól nastepnie wywolam je uzywajac wartosci ze skanera
+    //
     public ProductPC(String nazwa, String grupa, Integer cenanetto, Integer vat, Integer ilosc) {
         this.nazwa = nazwa;
         this.grupa = grupa;
@@ -16,8 +17,14 @@ public class ProductPC {
         this.ilosc = Integer.valueOf(ilosc);
     }
 
+
     String getNazwa() {
         return this.nazwa;
+
+    }
+    public void setNazwa(String nazwa){
+        this.nazwa = nazwa;
+        //this zawsze odwoluje sie do pola w obiekcie po = jest parametr
     }
 
     private String grupa;
