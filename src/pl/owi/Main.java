@@ -64,7 +64,7 @@ public class Main {
 
                     System.out.print("Ilość : ");
                     temp.setIlosc(scanner.nextInt());
-                    storehouse.dodajelement();
+
 
 
 
