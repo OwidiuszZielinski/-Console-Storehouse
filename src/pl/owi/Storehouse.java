@@ -6,13 +6,23 @@ import pl.owi.ProductPC;
 public class Storehouse {
 
 
-    public String nazwa;
-    public String nazwalisty;
+
     private static ArrayList<ProductPC> listatowarow = null; // po co ten null?tworzymy singleton czyli zamykamy liste w private
-    public final Integer wolnemiejsce = 2;
+    public static final Integer wolnemiejsce = 2;
 
 
+    // tworze singleton
 
+
+    //Wyjmuje pojedyncza instancje , jesli jej nie ma to utworzy nowy obiekt Arraylist.
+    //Opisz co tutaj stworzyles masz zapisane na DC z pobytu u Mateusza
+
+    public static ArrayList<ProductPC> getInstance(){
+        if (listatowarow == null);
+        listatowarow = new ArrayList<ProductPC>();
+
+        return listatowarow;
+    }
 
 
 
@@ -20,25 +30,13 @@ public class Storehouse {
     // dopisac logike licznia np brutto netto , ilosci
 
    public Storehouse() {
-        this.listatowarow = ProductPC.getInstance();
-
-
-    }
-
-    //metoda tworzenia listy
-    public void nowalista(){
-        this.listatowarow.add(new ProductPC());
 
     }
 
 
-
-
-
-
-    public void dodajelement(ProductPC nowy) {
-        if (this.listatowarow.size() < wolnemiejsce) {
-            this.listatowarow.add(nowy);
+    public static void dodajelement(ProductPC nowy) {
+        if (listatowarow.size() < wolnemiejsce) {
+            listatowarow.add(nowy);
 
         } else {
             System.out.println("Magazyn przepelniony");
@@ -48,34 +46,51 @@ public class Storehouse {
         //public String tostring(){
         //return ("")
 
+    public static void usunelement(int id) {
 
-        public void dodajelement() {
-            if (this.listatowarow.size() < wolnemiejsce) {
-                this.listatowarow.add(new ProductPC());
 
-            } else {
-                System.out.println("Magazyn przepelniony");
+        ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-                //Stworz produktpc w main uzywajac setterow i przeciaz metode dodajelement by przyjmowala obiekt klasy produktpc
-                //jako paramter i dodawala go do listy
-                //
-            }
+            listatowarow.remove(id);
 
-        }
+
+        System.out.println("Usunięto element o indeksie : " + id);
+
+
+
+
+    }
+
+
+
+            //Stworz produktpc w main uzywajac setterow i przeciaz metode dodajelement by przyjmowala obiekt klasy produktpc
+            //jako paramter i dodawala go do listy
+
+
             //przy wyswietlaniu listy wyswietlac id elementu
             //wtedy prosciej bedzie go wprowadzic do usuniecia
             //wyswietlic id idexOf w forze
 
 
-            public void pokazliste() {
-                for (ProductPC x : this.listatowarow) {
-            //dodaj pokaz liste
-                    System.out.println();
+            public static void pokazliste() {
+                for (ProductPC x : listatowarow) {
+
+
+                    System.out.println("Indeks to : " + listatowarow.indexOf(x));
+
+                    //dodaj pokaz liste
+
+                    System.out.println("Przedmioty w magazynie to : " + x.getNazwa() + " " + x.getGrupa()+ " "
+                            + x.getCenanetto()+ " "  + x.getVat() + " " + x.getIlosc());
+
                 }
+
             }
 
-            public void pokazdlugosclisty() {
-                System.out.println(this.listatowarow.size() < wolnemiejsce);
-                System.out.println(wolnemiejsce - this.listatowarow.size());
+            public static void pokazdlugosclisty() {
+                System.out.println(listatowarow.size() < wolnemiejsce);
+                System.out.println(wolnemiejsce - listatowarow.size());
             }
         }
+
+        // logike dopisac i brakujace elementy

@@ -11,7 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Storehouse storehouse = new Storehouse();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -19,36 +18,31 @@ public class Main {
 
         System.out.println("Wybierz działanie");
 
+        Storehouse.getInstance();
+
+        ArrayList<ProductPC> lista = Storehouse.getInstance();
+
+        //Stworzyłem obiekt typu ArrayList przyjmujacy pojedyncza instancje z storehouse
+
+
         while (true) {
-            //
-            //Zmiana
-            //System.out.println("Co dalej?");
 
-            System.out.println("1.Utwórz listę przedmiotów w magazynie");
 
-            System.out.println("2.Dodaj towar");
+            System.out.println("1.Dodaj towar");
 
-            System.out.println("3.Wyświetl przedmioty w magazynie i wolne miejsce");
+            System.out.println("2.Wyświetl przedmioty w magazynie i wolne miejsce");
 
-            System.out.println("4.Usuń element");
+            System.out.println("3.Usuń element");
 
-            System.out.println("5.Zakończ");
+            System.out.println("4.Zakończ");
 
             int choice = scanner.nextInt();
 
 
             switch (choice) {
+
+
                 case 1:
-
-                    System.out.println("Nazwij listę towarów - ");
-                    String nazwalisty = scanner.next();
-                    storehouse.nowalista();//czy konieczna jest ta metoda?
-                    System.out.println("Utworzono listę o nazwie : " + nazwalisty);
-                    //nie rozumiem dlaczego utworzylo listę i czy ją dobrze utworzylo bo nie zrobilem metody tworzenia list,
-                    //chyba ze konstruktor robi listy
-                    break;
-
-                case 2:
                     System.out.println("Wprowadź  :");
 
                     System.out.print("Nazwa towaru : ");
@@ -67,34 +61,25 @@ public class Main {
                     System.out.print("Ilość : ");
                     temp.setIlosc(scanner.nextInt());
 
-
-
+                    Storehouse.dodajelement(temp);
 
                     break;
 
+
+                case 2:
+
+                    Storehouse.pokazliste();
+
+                    Storehouse.pokazdlugosclisty();
+
+
+                    break;
 
                 case 3:
 
-                    storehouse.pokazliste();
+                    System.out.println("Wprowadź indeks elementu do usunięcia");
+                    Storehouse.usunelement(scanner.nextInt());
 
-                    storehouse.pokazdlugosclisty();
-
-
-
-
-
-
-                    break;
-
-                case 4:
-
-
-                    break;
-
-                case 5:
-                    break;
-
-                case 6:
                     break;
 
 

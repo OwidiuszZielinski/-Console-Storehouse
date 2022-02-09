@@ -5,7 +5,7 @@ public class ProductPC {
 
     private String nazwa;
 
-    private static ArrayList<ProductPC> listatowarow = null;// po co ten null?tworzymy singleton czyli zamykamy liste w private
+    // po co ten null?tworzymy singleton czyli zamykamy liste w private
 
     public ProductPC() {
 
@@ -20,16 +20,7 @@ public class ProductPC {
         this.ilosc = Integer.valueOf(ilosc);
     }
 
-    // tworze singleton
 
-    public static ArrayList<ProductPC> getInstance(){
-        if (listatowarow == null);
-        listatowarow = new ArrayList<ProductPC>();
-
-        return listatowarow;
-    }
-    //Wyjmuje pojedyncza instancje , jesli jej nie ma to utworzy nowy obiekt Arraylist.
-    //Opisz co tutaj stworzyles masz zapisane na DC z pobytu u Mateusza
 
 
     //tworze gettery i settery
@@ -45,16 +36,20 @@ public class ProductPC {
 
     private String grupa;
 
-    String getGrupa() {
+    String getGrupa()
+    {
         return this.grupa;
     }
-    public void setGrupa(String grupa){
+    public void setGrupa(String grupa)
+    {
         this.grupa = grupa;
+
     }
 
     private Integer cenanetto;
 
-    Integer getCenanetto() {
+    Integer getCenanetto()
+    {
         return this.cenanetto;
     }
     public void setCenanetto(Integer cenanetto){
@@ -66,16 +61,21 @@ public class ProductPC {
     Integer getVat() {
         return this.vat;
     }
-    public void setVat(Integer vat){
+    public void setVat(Integer vat)
+    {
         this.vat = vat;
+
     }
     private Integer ilosc;
 
-    Integer getIlosc() {
+    Integer getIlosc()
+    {
         return this.ilosc;
     }
-    public void setIlosc(Integer ilosc){
+    public void setIlosc(Integer ilosc)
+    {
         this.ilosc = ilosc;
+
     }
 
 
