@@ -5,13 +5,14 @@ public class ProductPC {
 
     private String nazwa;
 
-    // po co ten null?tworzymy singleton czyli zamykamy liste w private
+    //Prywatne pole klasy typu String
 
     public ProductPC() {
 
     }
-    //wywolam w main pusty konstruktor i stworze settery dla wszystkich pól nastepnie wywolam je uzywajac wartosci ze skanera
-    //
+    //Pusty konstuktor do wywołania w main ?
+
+
     public ProductPC(String nazwa, String grupa, Integer cenanetto, Integer vat, Integer ilosc) {
         this.nazwa = nazwa;
         this.grupa = grupa;
@@ -19,23 +20,28 @@ public class ProductPC {
         this.vat = vat;
         this.ilosc = Integer.valueOf(ilosc);
     }
+    // Przeciazony konstruktor , uzwany byl wczesniej do tworzenia obiektow bez getterow i setterów.
 
 
 
-
-    //tworze gettery i settery
 
     String getNazwa() {
         return this.nazwa;
 
     }
+    //Tworze getter przez podanie typu zmiennej i kluczowe słówko get nastepnie z duzej litery parametr
+
     public void setNazwa(String nazwa){
+
+    //Tworze setter jako metoda do ustanawiania wartosci zmiennej w parametrze podajac typ zmiennej
+
         this.nazwa = nazwa;
+
         //this zawsze odwoluje sie do pola w obiekcie po = jest parametr
     }
 
     private String grupa;
-
+    //jw. do kazdej zmiennej getter/setter
     String getGrupa()
     {
         return this.grupa;
