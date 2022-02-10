@@ -1,26 +1,24 @@
 package pl.owi;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.List;
-import pl.owi.Storehouse;
+
 //ignore dodaj
+
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in).useDelimiter("\n");
+        //
 
         System.out.println("Program do obługi magazynu");
 
         System.out.println("Wybierz działanie");
 
-        Storehouse.getInstance();
 
-        ArrayList<ProductPC> lista = Storehouse.getInstance();
+        Storehouse storehouse = Storehousefactory.getInstance();
 
         //Stworzyłem obiekt typu ArrayList przyjmujacy pojedyncza instancje z storehouse
 
@@ -61,16 +59,16 @@ public class Main {
                     System.out.print("Ilość : ");
                     temp.setIlosc(scanner.nextInt());
 
-                    Storehouse.dodajelement(temp);
+                    storehouse.dodajelement(temp);
 
                     break;
 
 
                 case 2:
 
-                    Storehouse.pokazliste();
+                    storehouse.pokazliste();
 
-                    Storehouse.pokazdlugosclisty();
+                    storehouse.pokazdlugosclisty();
 
 
                     break;
@@ -78,7 +76,7 @@ public class Main {
                 case 3:
 
                     System.out.println("Wprowadź indeks elementu do usunięcia");
-                    Storehouse.usunelement(scanner.nextInt());
+                    storehouse.usunelement(scanner.nextInt());
 
                     break;
 
