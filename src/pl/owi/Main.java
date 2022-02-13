@@ -1,11 +1,13 @@
 package pl.owi;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
 
 
         Scanner scanner = new Scanner(System.in).useDelimiter("\n");
@@ -18,6 +20,7 @@ public class Main {
 
 
         Storehouse storehouse = Storehousefactory.getInstance();
+        CsvService csv = new CsvService();
 
         //Stworzyłem obiekt Storehouse nazwany storehouse ?????????????????????????????????
 
@@ -35,7 +38,11 @@ public class Main {
 
             System.out.println("5.Pokaż długość listy");
 
-            System.out.println("6.Zakończ program");
+            System.out.println("6.Zapisz do pliku CSV");
+
+            System.out.println("7.Załaduj z pliku CSV");
+
+            System.out.println("8.Zakończ program");
 
             int choice = scanner.nextInt();
 
@@ -102,6 +109,19 @@ public class Main {
 
                 case 6:
 
+                    csv.writeToFile();
+
+                    break;
+
+                case 7:
+
+                    //readfromcsv
+
+                    break;
+
+
+                case 8:
+
                     System.out.println("Program zakończony");
                     System.exit(0);
 
@@ -112,3 +132,10 @@ public class Main {
         }
     }
 }
+
+
+/// Stworzyc 2 metody pozwalajace na zapisywanie listytowarow do pliku csv i odczytujace z pliku csv
+/// rozszerzenie csv - comma separated file
+
+/// 2 metody ktorwa laduje i zapisuje do pliku csv operacje na stringach
+/// zastosuj split po kropce

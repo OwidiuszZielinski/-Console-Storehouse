@@ -1,5 +1,5 @@
 package pl.owi;
-import java.util.ArrayList;
+
 
 public class ProductPC {
 
@@ -10,7 +10,8 @@ public class ProductPC {
     public ProductPC() {
 
     }
-    //Pusty konstuktor do wywołania w main ?
+    //Pusty konstuktor do wywołania w main
+    //odwolanie do niego przy tworzeniu obiektu bez podanych parametrow pozniej setterami dodajemy
 
 
     public ProductPC(String nazwa, String grupa, Integer cenanetto, Integer vat, Integer ilosc) {
@@ -83,6 +84,10 @@ public class ProductPC {
         this.ilosc = ilosc;
 
     }
+    public String toString(){
+        return(getNazwa() + getGrupa()+
+                getCenanetto()+ getVat() +  getIlosc() );
 
+    }
 
     }

@@ -1,7 +1,7 @@
 package pl.owi;
 
 import java.util.ArrayList;
-import pl.owi.ProductPC;
+
 
 public class Storehouse {
 
@@ -9,7 +9,7 @@ public class Storehouse {
     ////SERVICE!!!////ZBIOR METOD////
 
 
-    private  ArrayList<ProductPC> listatowarow = new ArrayList<>();
+    public ArrayList<ProductPC> listatowarow = new ArrayList<>();
     //Tworze prywatny obiekt Arrayliste klasy produkt pc nazwana listatowarow
 
 
@@ -19,6 +19,7 @@ public class Storehouse {
 
     Storehouse(){
         //pusty konstruktor po co ???????????????
+        //ograniczenie dostepu ale dokladnie przeanalizuj - dopytac lorda
 
     }
 
@@ -95,10 +96,12 @@ public class Storehouse {
 
     public void pokazcenebrutto(int id) {
         for (ProductPC x : listatowarow){
-            System.out.println("Cena brutto to : " + (x.getCenanetto() * x.getVat()/100 + x.getCenanetto()) + "PLN");
+            float brutto = (x.getCenanetto().floatValue() * x.getVat().floatValue()/100 + x.getCenanetto().floatValue());
+            System.out.println("Cena brutto to : " + brutto + "PLN");
         }
     }
             //metoda liczaca cene brutto danego towaru przy uzyciu petli for wyciagamy element z kolekcji i liczymy jego
             //cene brutto przez zwrocenie sie do zadeklarowanych setterem wartosci mnozymy cenne netto x stawke wat i dzielimy na 100
+
 
 }
