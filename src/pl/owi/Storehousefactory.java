@@ -13,9 +13,10 @@ public class Storehousefactory {
     //Singleton sprawdza czy obiekt storehouse posiada wartosc null jestli tak to tworzy nowy obiek storehouse oraz
     //zwraca storehouse
     public static Storehouse getInstance(){
-        if (storehouse == null) {
+        if (storehouse == null){
             storehouse = new Storehouse();
-        }
+	}
+
         return storehouse;
     }
 
