@@ -115,7 +115,7 @@ public class Main {
 
                 case 7:
 
-                    //readfromcsv
+                    csv.readfromcsv();
 
                     break;
 
