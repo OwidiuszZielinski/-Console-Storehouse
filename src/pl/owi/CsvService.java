@@ -41,11 +41,13 @@ public class CsvService {
             BufferedReader br = new BufferedReader(fr);
             String data;
             while ((data = br.readLine()) !=null)
-
             {
+
             String[] pobrane = data.split(",");
-            Storehouse storehouse = Storehousefactory.getInstance();
-            ProductPC nowy = new ProductPC();
+                System.out.println(pobrane[0]);
+            ProductPC nowy = new ProductPC(pobrane[0],pobrane[1],Integer.parseInt(pobrane[2]),Integer.parseInt(pobrane[3]),
+                    Integer.parseInt(pobrane[4]));
+
             storehouse.dodajelement(nowy);
             System.out.println("Wczytano wartości listy z pliku CSV");
             }
