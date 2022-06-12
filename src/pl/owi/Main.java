@@ -22,7 +22,7 @@ public class Main {
         Storehouse storehouse = Storehousefactory.getInstance();
         CsvService csv = new CsvService();
 
-        //Stworzyłem obiekt Storehouse nazwany storehouse ?????????????????????????????????
+        //Stworzyłem obiekt Storehouse nazwany storehouse i przypisujemy mu pojedyncza instacje z klasy storehousefactory
 
 
         while (true) {
